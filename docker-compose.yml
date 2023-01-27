@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  spark-data-transformer:
+    image: spark-data-transformer
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3070:80
+
+networks:
+  default:
+    name: local-network
